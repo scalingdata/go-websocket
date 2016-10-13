@@ -15,7 +15,7 @@ import (
 	"text/template"
 	"time"
 
-	"github.com/gorilla/websocket"
+	"github.com/scalingdata/go-websocket"
 )
 
 var (

@@ -5,11 +5,11 @@ Gorilla WebSocket is a [Go](http://golang.org/) implementation of the
 
 ### Documentation
 
-* [API Reference](http://godoc.org/github.com/gorilla/websocket)
-* [Chat example](https://github.com/gorilla/websocket/tree/master/examples/chat)
-* [Command example](https://github.com/gorilla/websocket/tree/master/examples/command)
-* [Client and server example](https://github.com/gorilla/websocket/tree/master/examples/echo)
-* [File watch example](https://github.com/gorilla/websocket/tree/master/examples/filewatch)
+* [API Reference](http://godoc.org/github.com/scalingdata/go-websocket)
+* [Chat example](https://github.com/scalingdata/go-websocket/tree/master/examples/chat)
+* [Command example](https://github.com/scalingdata/go-websocket/tree/master/examples/command)
+* [Client and server example](https://github.com/scalingdata/go-websocket/tree/master/examples/echo)
+* [File watch example](https://github.com/scalingdata/go-websocket/tree/master/examples/filewatch)
 
 ### Status
 
@@ -19,33 +19,33 @@ package API is stable.
 
 ### Installation
 
-    go get github.com/gorilla/websocket
+    go get github.com/scalingdata/go-websocket
 
 ### Protocol Compliance
 
 The Gorilla WebSocket package passes the server tests in the [Autobahn Test
 Suite](http://autobahn.ws/testsuite) using the application in the [examples/autobahn
-subdirectory](https://github.com/gorilla/websocket/tree/master/examples/autobahn).
+subdirectory](https://github.com/scalingdata/go-websocket/tree/master/examples/autobahn).
 
 ### Gorilla WebSocket compared with other packages
 
 <table>
 <tr>
 <th></th>
-<th><a href="http://godoc.org/github.com/gorilla/websocket">github.com/gorilla</a></th>
+<th><a href="http://godoc.org/github.com/scalingdata/go-websocket">github.com/gorilla</a></th>
 <th><a href="http://godoc.org/golang.org/x/net/websocket">golang.org/x/net</a></th>
 </tr>
 <tr>
 <tr><td colspan="3"><a href="http://tools.ietf.org/html/rfc6455">RFC 6455</a> Features</td></tr>
-<tr><td>Passes <a href="http://autobahn.ws/testsuite/">Autobahn Test Suite</a></td><td><a href="https://github.com/gorilla/websocket/tree/master/examples/autobahn">Yes</a></td><td>No</td></tr>
+<tr><td>Passes <a href="http://autobahn.ws/testsuite/">Autobahn Test Suite</a></td><td><a href="https://github.com/scalingdata/go-websocket/tree/master/examples/autobahn">Yes</a></td><td>No</td></tr>
 <tr><td>Receive <a href="https://tools.ietf.org/html/rfc6455#section-5.4">fragmented</a> message<td>Yes</td><td><a href="https://code.google.com/p/go/issues/detail?id=7632">No</a>, see note 1</td></tr>
-<tr><td>Send <a href="https://tools.ietf.org/html/rfc6455#section-5.5.1">close</a> message</td><td><a href="http://godoc.org/github.com/gorilla/websocket#hdr-Control_Messages">Yes</a></td><td><a href="https://code.google.com/p/go/issues/detail?id=4588">No</a></td></tr>
-<tr><td>Send <a href="https://tools.ietf.org/html/rfc6455#section-5.5.2">pings</a> and receive <a href="https://tools.ietf.org/html/rfc6455#section-5.5.3">pongs</a></td><td><a href="http://godoc.org/github.com/gorilla/websocket#hdr-Control_Messages">Yes</a></td><td>No</td></tr>
+<tr><td>Send <a href="https://tools.ietf.org/html/rfc6455#section-5.5.1">close</a> message</td><td><a href="http://godoc.org/github.com/scalingdata/go-websocket#hdr-Control_Messages">Yes</a></td><td><a href="https://code.google.com/p/go/issues/detail?id=4588">No</a></td></tr>
+<tr><td>Send <a href="https://tools.ietf.org/html/rfc6455#section-5.5.2">pings</a> and receive <a href="https://tools.ietf.org/html/rfc6455#section-5.5.3">pongs</a></td><td><a href="http://godoc.org/github.com/scalingdata/go-websocket#hdr-Control_Messages">Yes</a></td><td>No</td></tr>
 <tr><td>Get the <a href="https://tools.ietf.org/html/rfc6455#section-5.6">type</a> of a received data message</td><td>Yes</td><td>Yes, see note 2</td></tr>
 <tr><td colspan="3">Other Features</tr></td>
-<tr><td>Limit size of received message</td><td><a href="http://godoc.org/github.com/gorilla/websocket#Conn.SetReadLimit">Yes</a></td><td><a href="https://code.google.com/p/go/issues/detail?id=5082">No</a></td></tr>
-<tr><td>Read message using io.Reader</td><td><a href="http://godoc.org/github.com/gorilla/websocket#Conn.NextReader">Yes</a></td><td>No, see note 3</td></tr>
-<tr><td>Write message using io.WriteCloser</td><td><a href="http://godoc.org/github.com/gorilla/websocket#Conn.NextWriter">Yes</a></td><td>No, see note 3</td></tr>
+<tr><td>Limit size of received message</td><td><a href="http://godoc.org/github.com/scalingdata/go-websocket#Conn.SetReadLimit">Yes</a></td><td><a href="https://code.google.com/p/go/issues/detail?id=5082">No</a></td></tr>
+<tr><td>Read message using io.Reader</td><td><a href="http://godoc.org/github.com/scalingdata/go-websocket#Conn.NextReader">Yes</a></td><td>No, see note 3</td></tr>
+<tr><td>Write message using io.WriteCloser</td><td><a href="http://godoc.org/github.com/scalingdata/go-websocket#Conn.NextWriter">Yes</a></td><td>No, see note 3</td></tr>
 </table>
 
 Notes: 
